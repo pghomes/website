@@ -1,1 +1,1 @@
-web: gunicorn PGHomes_wesite.wsgi --log-file -
+web: gunicorn PGHomes_website.wsgi --log-file -
