@@ -9,6 +9,7 @@ pillow = "*"
 easy-thumbnails = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-jazzmin = "*"
 
 [dev-packages]
 
