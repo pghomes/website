@@ -33,7 +33,7 @@
 
                                                 Our first responsibility is to elevate your lifestyle. 
                                             </p>
-                                            <a href="#" data-animation="fadeInUp" data-delay=".6s"
+                                            <a href="{% url 'contact' %}" data-animation="fadeInUp" data-delay=".6s"
                                                 data-duration="1000ms"
                                                 class="btn btn-primary text-uppercase animated fadeInUp">
                                                 shedule a call
@@ -88,7 +88,7 @@
 
                                             All things properties from land to residential and commercial buildings.
                                             </p>
-                                            <a href="#" class="btn btn-primary text-uppercase animated fadeInUp">
+                                            <a href="{% url 'investment' %}" class="btn btn-primary text-uppercase animated fadeInUp">
                                                 view plans
                                                 <i class="fa fa-angle-right arrow-btn "></i></a>
                                         </div>
@@ -144,7 +144,7 @@
                         <p >
                             We believe that no Nigerian should be left out regardless of their occupation and income.
                         </p>
-                        <a href="#" class="btn btn-primary mt-3 text-capitalize"> read more
+                        <a href="{% url 'about' %}" class="btn btn-primary mt-3 text-capitalize"> read more
                             <i class="fa fa-angle-right ml-3 "></i></a>
                     </div>
                 </div>
@@ -186,10 +186,10 @@
                 <div class="clearfix"></div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-xl-5 col-padd">
+                <div class="col-lg-5 col-xl-5 col-padd" data-aos="fade-right">
                     <!-- CARD IMAGE -->
 
-                    <a href="#">
+                    <a href="{% url 'project_listing' %}">
                         <div class="card__image-hover-style-v3">
                             <div class="card__image-hover-style-v3-thumb h-475">
                                 <img src="{% static 'images/Lugbe.png' %}" alt="" class="img-fluid w-100">
@@ -207,7 +207,7 @@
                     <div class="row">
                         <div class="col-md-6 col-padd">
                             <!-- CARD IMAGE -->
-                            <a href="#">
+                            <a href="{% url 'project_listing' %}">
                                 <div class="card__image-hover-style-v3">
                                     <div class="card__image-hover-style-v3-thumb h-230">
                                         <img src="{% static 'images/Royal Garden Kuje.png' %}" alt="" class="img-fluid w-100">
@@ -221,9 +221,9 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-6 col-padd">
+                        <div class="col-md-6 col-padd" data-aos="fade-left">
                             <!-- CARD IMAGE -->
-                            <a href="#">
+                            <a href="{% url 'project_listing' %}">
                                 <div class="card__image-hover-style-v3">
                                     <div class="card__image-hover-style-v3-thumb h-230">
                                         <img src="{% static 'images/Sterling Estate Kuje.png' %}" alt="" class="img-fluid w-100">
@@ -239,7 +239,7 @@
                         </div>
                         <div class="col-md-6 col-padd">
                             <!-- CARD IMAGE -->
-                            <a href="#">
+                            <a href="{% url 'project_listing' %}">
                                 <div class="card__image-hover-style-v3">
                                     <div class="card__image-hover-style-v3-thumb h-230">
                                         <img src="{% static 'images/Ushafa Bwari.png' %}" alt="" class="img-fluid w-100">
@@ -253,9 +253,9 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-6 col-padd">
+                        <div class="col-md-6 col-padd" data-aos="fade-left">
                             <!-- CARD IMAGE -->
-                            <a href="#">
+                            <a href="{% url 'project_listing' %}">
                                 <div class="card__image-hover-style-v3">
                                     <div class="card__image-hover-style-v3-thumb h-230">
                                         <img src="{% static 'images/Katampe Extension.png' %}" alt="" class="img-fluid w-100">
@@ -446,7 +446,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-right">
             <!-- - - - - - - - - - - - - - Investment Table - - - - - - - - - - - - - - - - -->
             <div class="col-md-6 col-sm-12 col-lg-3">
                 <div class="pricing-item">
@@ -466,7 +466,7 @@
                         <li class="pricing-feature">Small social media package</li>
                            -->
                     </ul>
-                    <a href="#" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
                 </div>
             </div>
             <div class="col-md-6  col-sm-12 col-lg-3">
@@ -487,7 +487,7 @@
                         <li class="pricing-feature">Small social media package</li>
                            -->
                     </ul>
-                    <a href="#" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
                 </div>
             </div>
             <div class="col-md-6  col-sm-12 col-lg-3">
@@ -508,7 +508,7 @@
                         <li class="pricing-feature">Small social media package</li>
                            -->
                     </ul>
-                    <a href="#" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
                 </div>
             </div>
             <div class="col-md-6  col-sm-12 col-lg-3">
@@ -531,7 +531,7 @@
                            -->
                         
                     </ul>
-                    <a href="#" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
                 </div>
             </div>
         </div>

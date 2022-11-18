@@ -120,7 +120,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="single__detail-desc">
-                            <h6 class="text-capitalize detail-heading">description</h6>
+                            <h6 class="text-capitalize detail-heading">Estate Description</h6>
                             <div class="show__more">
                                 <p>{{ project.description}}</p>
                                
@@ -133,7 +133,7 @@
 
                         <!-- PROPERTY DETAILS SPEC -->
                         <div class="single__detail-features">
-                            <h6 class="text-capitalize detail-heading">project Details</h6>
+                            <h6 class="text-capitalize detail-heading">Estate Details</h6>
                             <!-- INFO PROPERTY DETAIL -->
                             <div class="property__detail-info">
                                 <div class="row">
@@ -165,7 +165,7 @@
 
                         <!-- FEATURES -->
                         <div class="single__detail-features">
-                            <h6 class="text-capitalize detail-heading">facilities</h6>
+                            <h6 class="text-capitalize detail-heading">Estate facilities</h6>
                             
                             <ul class="list-unstyled icon-checkbox">
                                 {% for facility in project.facilities.all %}
@@ -222,12 +222,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="title__head-v2">
-                    <h2 class="text-capitalize">featured property</h2>
-                    <p class="text-capitalize">Handpicked Exclusive Properties By Our Team.</p>
+                    <h2 class="text-capitalize">House Types In {{project.name}}</h2>
+                    <p class="text-capitalize">There are {{project.housetypes.all| length}} distinct House Types in {{project.name}}</p>
                 </div>
             </div>
         </div>
         <div class="recent__property-carousel owl-carousel owl-theme">
+           
+                               
+
+            {% for housetype in project.housetypes.all %}
             <div class="item">
                 <!-- CARD IMAGE -->
 
@@ -236,50 +240,52 @@
                         <div class="card__image-hover-overlay">
                             <div class="listing-badges">
                                 <span class="featured">
-                                    House Name
+                                    {{housetype.house_name}}
                                 </span>
                                 <span>
-                                    status
+                                    {{housetype.status}}
                                 </span>
                             </div>
                             <div class="card__image-content">
                                 <div class="card__image-content-desc">
-                                    <h6> Citra Garden Estate</h6>
-                                    <p class="mb-0"> $1300 / monthly</p>
+                                    <h6>  {{housetype.house_specification}}</h6>
+                                    <p class="mb-0"> N{{housetype.house_outright_payment}} / outright payment</p>
                                 </div>
                                 <ul class="list-inline card__hidden-content">
                                     <li class="list-inline-item">
                                         Baths
                                         <span>
-                                            <i class="fa fa-bath"></i> 2
+                                            <i class="fa fa-bath"></i>  {{housetype.bath}}
                                         </span>
                                     </li>
                                     <li class="list-inline-item">
                                         Beds
                                         <span>
-                                            <i class="fa fa-bed"></i> 2
+                                            <i class="fa fa-bed"></i>  {{housetype.bed}}
                                         </span>
                                     </li>
                                     <li class="list-inline-item">
                                         Units
                                         <span>
-                                            <i class="fa fa-inbox"></i> 3
+                                            <i class="fa fa-inbox"></i>  {{housetype.units}}
                                         </span>
                                     </li>
                                     <li class="list-inline-item">
                                         Area
                                         <span>
-                                            <i class="fa fa-map"></i> 1450 sq ft
+                                            <i class="fa fa-map"></i>  {{housetype.house_floor_area}}
                                         </span>
                                     </li>
 
                                 </ul>
                             </div>
-                            <img alt="" src="images/gallery18.jpg" class="img-fluid h-40 ">
+                            <img alt="" src="{{housetype.image.url}}" class="img-fluid h-40 ">
                         </div>
                     </div>
                 </a>
             </div>
+            
+            {% endfor%}
 
         </div>
     </div>

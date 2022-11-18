@@ -1,4 +1,6 @@
 
+from email.mime import image
+from email.policy import default
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
@@ -107,10 +109,28 @@ class HouseType (models.Model):
     house_name = models.CharField(max_length=250, null= True, blank= True)
     house_specification = models.CharField(max_length=300, help_text='Enter a brief specification of the product')
     house_floor_area = models.PositiveBigIntegerField(help_text="Enter the net floor area for the product")
-    features = models.ManyToManyField(HouseFeature, help_text='Select a feature for this product')
     units = models.PositiveIntegerField(null= True, blank=True)
     house_outright_payment = models.DecimalField(max_digits=12, decimal_places=2, help_text="Enter the outright payment price", default= 0)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='housetypes',)
+    image= models.ImageField(upload_to ="images/", default= True)
+    bed=models.PositiveBigIntegerField(help_text="Enter the Number of Bedrooms", default=1)
+    bath=models.PositiveBigIntegerField(help_text="Enter the Number of Bathrooms", default=1)
+
+
+    
+
+    HOUSETYPE_STATUS = (
+        ('For Rent', 'For Rent'),
+        ('For Sale', 'For Sale')
+    )
+
+    status = models.CharField(
+        max_length=50,
+        choices= HOUSETYPE_STATUS,
+        blank=True,
+        default='For Sale',
+        help_text='House Type status',
+    )
 
 
     class meta :
